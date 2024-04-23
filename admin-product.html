@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Admin Product</title>
+    <title>Quản trị Sản phẩm</title>
     <link rel="stylesheet" href="assets/css/popup.css">
     <link rel="stylesheet" href="assets/css/admin.css">
-    <link rel="icon" type="image/png" href="images/LOGO.webp">
+    <link rel="icon" type="image/png" href="assets/images/pic/logoicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
@@ -32,26 +31,26 @@
                   <li>
                     <a href="admin-strator.html">
                          <span class="las la-address-card"></span>
-                         <small>Administrator</small>
+                         <small>Quản trị viên</small>
                      </a>
                  </li>
                 <li >
                    <a href="admin-user.html">
                         <span class="las la-user-alt"></span>
-                        <small>Customers</small>
+                        <small>Khách hàng</small>
                     </a>
                 </li>
              
                 <li>
                    <a href="admin-product.html">
                         <span class="las la-clipboard-list" style="color: #fff;"></span>
-                        <small style="color: #fff;">Products</small>
+                        <small style="color: #fff;">Sản phẩm</small>
                     </a>
                 </li>
                 <li>
                    <a href="admin-order.html">
                         <span class="las la-shopping-cart"></span>
-                        <small>Orders</small>
+                        <small>Đơn hàng</small>
                     </a>
                 </li>
                
@@ -87,7 +86,7 @@
                       
                         
                         <span style="font-size: 25px;cursor: pointer;" class="las la-power-off" onclick="window.location.href='login-admin.html'"></span>
-                        <span style="font-size: 20px; cursor: pointer;" onclick="window.location.href='login-admin.html'">Logout</span>
+                        <span style="font-size: 20px; cursor: pointer;" onclick="window.location.href='login-admin.html'">Đăng xuất</span>
                     </div>
                 </div>
             </div>
@@ -97,9 +96,9 @@
         <main >
 <div class="page-content">
         
-    <h1 style="padding: 1.3rem 0rem;color: #74767d;" id="product">Products</h1>
+    <h1 style="padding: 1.3rem 0rem;color: #74767d;" id="product">Sản phẩm</h1>
     <div>
-      <button style="margin-bottom: 8px;" id="showadd" onclick="showadd()"><i class="fa-solid fa-circle-plus" style="margin-right: 4px;"></i>  Add Product</button>
+      <button style="margin-bottom: 8px;" id="showadd" onclick="showadd()"><i class="fa-solid fa-circle-plus" style="margin-right: 4px;"></i>  Thêm Sản phẩm</button>
     </div>
 </div>
           
@@ -109,13 +108,13 @@
 
 
 <div class="browse">
-<input type="search" placeholder="Search (#ID)" class="record-search">
+<input type="search" placeholder="Tìm kiếm (#ID)" class="record-search">
 
 </div>
 
 <div class="add">
 
-  <span>Entries</span>
+  <span>Hiển thị</span>
   <select name="" id="">
     <option value="">10</option>
     <option value="">16</option>
@@ -128,13 +127,13 @@
 <table width="100%" id="table-product">
 <thead>
 <tr id="select-filter">
-    <th>ID PRODUCT</th>
-    <th> IMAGE </th>
-    <th> NAME</th>
-    <th> PRICE </th>
-    <th> QUANTITY</th>
-    <th> DATE ADD </th>
-    <th> ACTION</th>
+    <th>ID SẢN PHẨM</th>
+    <th> HÌNH ẢNH </th>
+    <th> TÊN</th>
+    <th> GIÁ </th>
+    <th> SỐ LƯỢNG</th>
+    <th> NGÀY THÊM</th>
+    <th> HÀNH ĐỘNG</th>
    
 </tr>
 </thead>
@@ -323,9 +322,9 @@ Coca Original
 </table>
 
 <ul class="pagination" id="pagination">
-  <li onclick="prevPage()">Prev</li>
+  <li onclick="prevPage()">Trước</li>
   <li class="active">1</li>
-  <li onclick="nextPage()">Next</li>
+  <li onclick="nextPage()">Tiếp</li>
 </ul>
 </div>
 
@@ -336,7 +335,7 @@ Coca Original
 <div class="popup"  >
   <div id="nutrifact">
   
-      <h1 class="bold">Nutrition Facts</h1> 
+      <h1 class="bold">Giá trị dinh dưỡng</h1> 
       <i class="fa-solid fa-xmark" id="close-ic" onclick="hidePopup()"></i>
      
   </div>
@@ -345,30 +344,30 @@ Coca Original
   
   <div class="daily-value small-text">
      
-      <p><span><span class="bold">Serving Size 12 fl oz (<input min="0" placeholder="?"> mL)</span> </p>
-      <p ><span><span class="bold">Serving Per Container 1</span></p>
+      <p><span><span class="bold">Dịch vụ ăn 12 fl oz (<input min="0" placeholder="?"> mL)</span> </p>
+      <p ><span><span class="bold">Dịch vụ trên mỗi lon 1</span></p>
     
-      <p><span><span class="bold">Amount Per Serving</span> </span> </p>
+      <p><span><span class="bold">Lượng trên mỗi dịch vụ</span> </span> </p>
   
-      <p style="border: none;"><span><span class="bold">Calories</span> <input min="0" placeholder="?">g</span> </p>
+      <p style="border: none;"><span><span class="bold">Calo</span> <input min="0" placeholder="?">g</span> </p>
     
     </div>
     
       <div class="divider large"></div>
       <div class="daily-value small-text">
-        <p class="bold right no-divider">% Daily Value *</p>
+        <p class="bold right no-divider">% Giá trị hàng ngày *</p>
         <div class="divider"></div>
-        <p><span><span class="bold">Total Fat</span> <input min="0" placeholder="?">g</span> <span ><input min="0" min="0" placeholder="?">%</span></p>
-        <p><span><span class="bold">Sodium</span> <input min="0" placeholder="?">mg</span> <span ><input min="0" min="0" placeholder="?">%</span></p>
-        <p><span><span class="bold">Total Carbohydrate</span> <input min="0" placeholder="?">g</span> <span ><input min="0" placeholder="?">%</span></p>
-        <p><span><span class="bold">Sugars</span> <input min="0" placeholder="?">g</span> </p>
+        <p><span><span class="bold">Chất béo tổng số</span> <input min="0" placeholder="?">g</span> <span ><input min="0" min="0" placeholder="?">%</span></p>
+        <p><span><span class="bold">Natri</span> <input min="0" placeholder="?">mg</span> <span ><input min="0" min="0" placeholder="?">%</span></p>
+        <p><span><span class="bold">Tổng lượng carbohydrate</span> <input min="0" placeholder="?">g</span> <span ><input min="0" placeholder="?">%</span></p>
+        <p><span><span class="bold">Đường</span> <input min="0" placeholder="?">g</span> </p>
         <p style="border: none;"><span><span class="bold">Protein</span> <input min="0" placeholder="?">g</span> </p>
       
       </div>
   
   
   <div class="divider medium"></div>
-  <p class="note"> *The Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</p>
+  <p class="note"> *Giá trị hàng ngày (DV) cho biết bao nhiêu chất dinh dưỡng trong mỗi lượng thực phẩm góp phần vào một chế độ ăn uống hàng ngày. 2,000 calo mỗi ngày được sử dụng cho lời khuyên dinh dưỡng chung.</p>
   <i class="fa-solid fa-check" id="submit-ic"></i>
 </div>
 </div>
@@ -377,20 +376,20 @@ Coca Original
 <div id="container-inputs">
 
   <div class="user-tab">
-    <h1>ADD PRODUCT</h1>
+    <h1>THÊM SẢN PHẨM</h1>
   <i class="fa-solid fa-xmark" id="closeadd" onclick="hideadd()"></i>
   
   <form>
 
 <div class="user-input" style="margin-top: 30px;">
-  <label>Name:</label>
+  <label>Tên:</label>
 <input type="text" name="name" id="name">
 </div>
 
 <div class="user-input" style="margin-bottom: 10px;">
-  <label>Image:</label>
+  <label>Hình ảnh:</label>
   <div class="upload-btn-wrapper">
-    <button class="btn-upload">Upload Image <br> <i class="fa-solid fa-cloud-arrow-up"></i></button>
+    <button class="btn-upload">Tải ảnh lên <br> <i class="fa-solid fa-cloud-arrow-up"></i></button>
     
     <input type="file" name="fimage1" id="fimage1" onchange="previewImage()" />
     
@@ -399,18 +398,18 @@ Coca Original
         </div>
 <div id="image-pre-container">
 
-          <img id="preview-image" src="" alt="Preview Image" width="25%" style="display: none; margin-bottom: 8px;">
+          <img id="preview-image" src="" alt="Xem trước ảnh" width="25%" style="display: none; margin-bottom: 8px;">
        </div>     
          <div class="user-input">
-          <label> Type:</label>
+          <label> Loại:</label>
          <select style="padding: 2px 0px;">
-            <option value="0">Select Type</option>
-            <option value="carbonated">Carbonated</option>
-            <option value="nogas">Non-carbonated</option>
+            <option value="0">Chọn Loại</option>
+            <option value="carbonated">Có ga</option>
+            <option value="nogas">Không có ga</option>
           </select>
-          <label> Brand:</label>
+          <label> Thương hiệu:</label>
           <select name="brand" id="brand">
-             <option value="0">Select Brand</option>
+             <option value="0">Chọn Thương hiệu</option>
              <option value="cocacola">Coca-cola</option>
              <option value="pepsi">Pepsi</option>
              <option value="fanta">Fanta</option>
@@ -426,28 +425,28 @@ Coca Original
 
 
 <div class="user-input">
-  <label>Price:</label>
+  <label>Giá:</label>
 <input type="number" name="price" id="price">     
-<label>Quantity:</label>
+<label>Số lượng:</label>
 <input type="number" name="soluong" id="soluong" min="1" >
 </div>
 
 
 
 <div class="user-input">
-  <label>Date Add:</label>
+  <label>Ngày Thêm:</label>
 <input type="date" name="date_add" id="date_add">
 </div>
 <div class="user-input">
-  <label>Description:</label>
-<input style="width:80px; font-size:17px; text-align:center; cursor:pointer;" value="Show" type="button" id="showpopup" onclick="showPopup()">
+  <label>Mô tả:</label>
+<input style="width:80px; font-size:17px; text-align:center; cursor:pointer;" value="Hiển thị" type="button" id="showpopup" onclick="showPopup()">
 </div>
 <div class="user-input" style="display: none;">
-Action:<input type="text" name="action" id="action" >
+Hành động:<input type="text" name="action" id="action" >
 </div>
  
 <div style="text-align: center;" id="button-submit">
-  <button>Submit</button>
+  <button>Gửi</button>
 
 </div>
 </form>
@@ -552,4 +551,3 @@ Action:<input type="text" name="action" id="action" >
   
   }
   </script>
-
